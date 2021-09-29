@@ -27,13 +27,14 @@ def testreq():
             Workers[token] = time.time()
             cursor.execute(f"UPDATE Project SET isworking=1  WHERE token='{token}'")
             conn.commit()
-        except:
-            return  "Bad"
+        except Exception as err:
+            print(err)
 
     return "Ok"
 
 
 def checker():
+    peinr("Okcheck)
     while True:
         try:
             copy = Workers.copy().items()
@@ -57,8 +58,8 @@ def checker():
                             bot.send_message(b,"Ваш сервер, под названием "+projectname+" упал")
                         except:
                             pass
-        except:
-            pass
+        except Exception as err:
+            print(err)
 
 
 
