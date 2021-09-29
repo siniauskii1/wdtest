@@ -68,9 +68,9 @@ def server():
 
 
 if __name__ == '__main__':
-    thr = threading.Thread(target=checker)
+    thr = threading.Thread(target=server)
     thr.start()
-    server()
+    checker()
 
 
 
