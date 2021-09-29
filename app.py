@@ -34,7 +34,7 @@ def testreq():
 
 
 def checker():
-    peinr("Okcheck)
+    print("Okcheck")
     while True:
         try:
             copy = Workers.copy().items()
@@ -72,6 +72,5 @@ if __name__ == '__main__':
     thr = threading.Thread(target=server)
     thr.start()
     checker()
-
 
 
