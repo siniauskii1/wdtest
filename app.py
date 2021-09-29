@@ -12,8 +12,15 @@ app=Flask(__name__)
 bot = telebot.TeleBot(ttoken)
 Workers = {}
 
-@app.route('/')
+с = 0
+
+@app.route('/start228')
 def test():
+    global с
+    if с == 0:
+      thr = threading.Thread(target=checker)
+      thr.start()
+      c = 1
     return "OK"
 
 @app.route('/HealthChecker',methods = ['POST'])
