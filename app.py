@@ -69,6 +69,7 @@ def server():
 
 
 if __name__ == '__main__':
+    print("okmain2")
     thr = threading.Thread(target=server)
     thr.start()
     print("okmain")
