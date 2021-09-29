@@ -18,7 +18,7 @@ def test():
 
 @app.route('/HealthChecker',methods = ['POST'])
 def testreq():
-
+    print("OKtest")
     if request.method=='POST':
         try:
             jsonStr = request.get_json()
