@@ -12,7 +12,7 @@ app=Flask(__name__)
 
 @app.route('/HealthChecker',methods = ['POST','GET'])
 def testreq():
-    if request.method == 'GET':
+    if request.method == 'POST':
         try:
             jsonStr = "fdsf"
             #request.get_json()
