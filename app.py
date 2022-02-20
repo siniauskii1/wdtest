@@ -10,7 +10,7 @@ conn = psycopg2.connect(dbname=db, user=user,
 cursor = conn.cursor()
 app=Flask(__name__)
 
-@app.route('/HealthChecker',methods = ['POST'])
+@app.route('/HealthChecker',methods = ['POST','GET'])
 def testreq():
     if request.method == 'POST':
         try:
