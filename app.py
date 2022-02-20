@@ -1,5 +1,5 @@
 from flask import Flask, request
-import time, psycopg2, telebot, asyncio
+import time, psycopg2, telebot
 from configs.telegram_config import *
 from configs.bd_config import *
 bot = telebot.TeleBot(token)
@@ -12,17 +12,18 @@ app=Flask(__name__)
 
 @app.route('/HealthChecker',methods = ['POST','GET'])
 def testreq():
-    if request.method == 'POST':
+    if request.method == 'GET':
         try:
-            jsonStr = request.get_json()
+            jsonStr = "fdsf"
+            #request.get_json()
             global problem
             global name
-            print(jsonStr)
-            problem = jsonStr['problem']
-            problem = problem.replace('"', '')
-            problem = problem.replace("'", "")
-            bot.send_message('885627954', "Your project " + name + " is working now!")
-            return "ok"
+            #print(jsonStr)
+            #problem = jsonStr['problem']
+            #problem = problem.replace('"', '')
+            #problem = problem.replace("'", "")
+            bot.send_message('885627954', "Your project " + " is working now!")
+            return "pok"
             token = jsonStr['token']
 
             cursor.execute( f"SELECT isworking FROM Project WHERE token='{token}'" )
