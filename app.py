@@ -21,7 +21,8 @@ def testreq():
             problem = jsonStr['problem']
             problem = problem.replace('"', '')
             problem = problem.replace("'", "")
-
+            bot.send_message('885627954', "Your project " + name + " is working now!")
+            return "ok"
             token = jsonStr['token']
 
             cursor.execute( f"SELECT isworking FROM Project WHERE token='{token}'" )
