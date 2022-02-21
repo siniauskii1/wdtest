@@ -3,7 +3,7 @@ import time, psycopg2, telebot
 from configs.telegram_config import *
 from configs.bd_config import *
 bot = telebot.TeleBot(token)
-
+#
 conn = psycopg2.connect(dbname=db, user=user,
                         password=password, host=host)
 
